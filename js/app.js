@@ -1,7 +1,13 @@
 $(document).ready( function() {
+	// start the carousel
+	$('.carousel').carousel({
+		interval: 4000,
+		cycle: true
+	});
+
 	// function to change content
 	function changeContent( set ) {
-		$('.active').removeClass('active');
+		$('.nav > .active').removeClass('active');
 		set.link.addClass('active');
 		$('.show').removeClass('show').addClass('hide');
 		set.content.removeClass('hide').addClass('show');
@@ -9,6 +15,10 @@ $(document).ready( function() {
 
 	// define all of the sections
 	var sections = {
+		welcome: {
+			link:  		$('#welcome_link'),
+			content:  	$('#welcome')
+		},
 		story: {
 			link: 		$('#story_link'),
 			content: 	$('#story')
@@ -44,7 +54,8 @@ $(document).ready( function() {
 	};
 
 	_.each(sections, function(section) {
-		section.link.click( function() {
+		section.link.click( function(event) {
+			event.preventDefault();
 			changeContent(section);
 		});
 	});

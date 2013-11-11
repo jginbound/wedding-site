@@ -1,0 +1,11 @@
+.carousel-inner>.item>img {
+	margin: 0 auto;
+	height: 320px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #ffffff;
+  background-color: #578754;
+}
