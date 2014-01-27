@@ -22,7 +22,8 @@
   "contributors": [],
   "dependencies": {
     "express": "*",
-    "path": "*"
+    "path": "*",
+    "mysql": "2.0.0-rc1"
   },
   "devDependencies": {},
   "engines": {

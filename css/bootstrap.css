@@ -599,12 +599,10 @@ ol ol {
 
 .list-unstyled {
   padding-left: 0;
-  list-style: none;
 }
 
 .list-inline {
   padding-left: 0;
-  list-style: none;
 }
 
 .list-inline > li {
@@ -4043,7 +4041,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav {
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none;
 }
 
 .nav:before,
@@ -4391,11 +4388,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   content: " ";
 }
 
-.navbar-collapse:after {
+.bar-collapse:after {
   clear: both;
 }
 
-.navbar-collapse:before,
+.bar-collapse:before,
 .navbar-collapse:after {
   display: table;
   content: " ";
