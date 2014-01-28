@@ -6,6 +6,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/wedding.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/iris2.png">
   </head>
   <body>
     <script type="text/x-handlebars">
@@ -177,11 +178,11 @@
               <th>Association</th>
             </tr>
           </thead>
-          {{#each}}
+          {{#each rsvp in controller}}
             <tr>
-              <td>{{full_name}}</td>
-              <td>{{stomping_ground}}</td>
-              <td>{{guest_association}}</td>
+              <td>{{rsvp.full_name}}</td>
+              <td>{{rsvp.stomping_ground}}</td>
+              <td>{{rsvp.guest_association}}</td>
             </tr>
           {{/each}}
         </table>
@@ -214,7 +215,7 @@
               {{input type="text" value=zip_code placeholder="Zip code here"}}
             </div>
             <div class="group1">
-              <label>Guest</label>
+              <label>Guests</label>
               {{input type='number' value=guests placeholder=0}}
             </div>
             <div id="foodChoice">

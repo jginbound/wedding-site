@@ -92,6 +92,7 @@ app.post( '/rsvps', function(request, response) {
             if (err) throw err;
 
             req.id = results.insertId;
+            console.log(req);
             return response.send({ 'rsvp': req })
     });
 });

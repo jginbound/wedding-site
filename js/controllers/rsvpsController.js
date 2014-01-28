@@ -1,5 +1,6 @@
 App.RsvpsController = Ember.ArrayController.extend({
 	sortProperties: ['first_name'],
+
 	rsvpsCount: function() {
 		return this.get('model.length');
 	}.property('@each'),
@@ -9,5 +10,10 @@ App.RsvpsController = Ember.ArrayController.extend({
 			$('#rsvp_button').hide();
 			this.transitionToRoute('add');
 		}
-	}
+	},
+
+	reloadModels: function() {
+		var rsvps = this.store.find('rsvp');
+		this.set('content', rsvps);
+	}.observes('model')
 });

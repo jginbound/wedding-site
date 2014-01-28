@@ -7,6 +7,7 @@ App.Rsvp = DS.Model.extend({
 	guests: DS.attr(),
 	salmon: DS.attr(),
 	bbq: DS.attr(),
+	veggie: DS.attr(),
 	groom_bride: DS.attr(),
 	association: DS.attr(),
 
