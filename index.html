@@ -18,6 +18,13 @@
             <li data-target="#image_carousel" data-slide-to="0" class="active"></li>
             <li data-target="#image_carousel" data-slide-to="1"></li>
             <li data-target="#image_carousel" data-slide-to="2"></li>
+            <li data-target="#image_carousel" data-slide-to="3"></li>
+            <li data-target="#image_carousel" data-slide-to="4"></li>
+            <li data-target="#image_carousel" data-slide-to="5"></li>
+            <li data-target="#image_carousel" data-slide-to="6"></li>
+            <li data-target="#image_carousel" data-slide-to="7"></li>
+            <li data-target="#image_carousel" data-slide-to="8"></li>
+            <li data-target="#image_carousel" data-slide-to="9"></li>
           </ol>
 
           {{! Wrapper for slides }}
@@ -30,6 +37,24 @@
             </div>
             <div class="item">
               <img src="images/us/ferry.jpg" alt="On a ferry ride">
+            </div>
+            <div class="item">
+              <img src="images/us/jordan1.jpg" alt="Us in Jordan">
+            </div>
+            <div class="item">
+              <img src="images/us/pcwedding.jpg" alt="RPCV Wedding">
+            </div>
+            <div class="item">
+              <img src="images/us/save_the_date.jpeg" alt="A 100th birthday!">
+            </div>
+            <div class="item">
+              <img src="images/us/skiing.jpg" alt="Skiiing at Mount Hood">
+            </div>
+            <div class="item">
+              <img src="images/us/working.jpg" alt="Building the garden beds">
+            </div>
+            <div class="item">
+              <img src="images/us/us_LA.jpg" alt="An RPCV wedding">
             </div>
           </div>
 
@@ -243,7 +268,7 @@
 
       <h3>Seattle</h3>
       <ul>
-        <li>Visit Pike’s Place Market</li>
+        <li>Visit Pike&#39;s Place Market</li>
         <li>Bar hop on Capitol Hill</li>
         <li>Stroll leisurely around Seward Park</li>
         <li>Take a ferry ride out to Bainbridge Island</li>
@@ -258,7 +283,7 @@
 
       <h2>Portland</h2>
       <ul>
-        <li>Go to Powell’s Bookstore</li>
+        <li>Go to Powell&#39;s Bookstore</li>
         <li>Get a donut from Voodoo Donuts</li>
         <li>Walk some (or all) of Portland’s 9 bridges</li>
         <li>Visit Saturday Market</li>
@@ -298,8 +323,16 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="follow_us">
-      <a class="twitter-timeline" href="https://twitter.com/mattmerkes" data-widget-id="406107361422495744">Tweets by @mattmerkes</a>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      <h1>Welcome to our following page!</h1>
+      <p>We want to have as many people as possible share their experience with everyone. So, we created a Twitter account for just that purpose! Include @MattAndRebekah in your tweets to have it show up here.</p>
+      <h3>We&#39;d especially love the following:</h3>
+      <ul>
+        <li>Take a silly selfie while you&#39;re travelling to the wedding.</li>
+        <li>A picture of you and a friend you haven&#39;t seen in a long time.</li>
+        <li>People happy and celebrating.</li>
+        <li>Or, whatever! You get the idea.</li>
+      </ul>
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%40MattAndRebekah" data-widget-id="428543652860678144">Tweets about "@MattAndRebekah"</a>
     </script>
 
     <!-- dependencies -->
@@ -322,6 +355,10 @@
     <script src="js/controllers/applicationController.js"></script>
     <script src="js/routes/indexRoute.js"></script>
     <script src="js/views/views.js"></script>
-
+    <script src="js/controllers/follow_us.js"></script>
   </body>
+
+  <!--
+   {{!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");}}
+ -->
 </html>

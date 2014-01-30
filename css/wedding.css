@@ -93,3 +93,9 @@ img {
 .group1 label {
 	width: 100px;
 }
+
+.twitter-timeline {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
