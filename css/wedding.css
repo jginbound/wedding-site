@@ -99,3 +99,8 @@ img {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+#map {
+	height: 400px;
+	max-width: 700px;
+}

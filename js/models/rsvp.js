@@ -27,8 +27,16 @@ App.Rsvp = DS.Model.extend({
 		});
 
 		data = JSON.parse(data.responseText);
+		data = data.results[0];
+		var geo = data.geometry.bounds.northeast;
 
-		return data.results[0].formatted_address;
+		var address_info = {
+			address: data.formatted_address,
+			lat: geo.lat,
+			lng: geo.lng
+		}
+		//return data.results[0].formatted_address;
+		return address_info;
 	}.property('zip_code'),
 
 	guest_association: function() {

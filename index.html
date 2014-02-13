@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
     <link href="css/wedding.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/iris2.png">
   </head>
@@ -206,11 +207,13 @@
           {{#each rsvp in controller}}
             <tr>
               <td>{{rsvp.full_name}}</td>
-              <td>{{rsvp.stomping_ground}}</td>
+              <td>{{rsvp.stomping_ground.address}}</td>
               <td>{{rsvp.guest_association}}</td>
             </tr>
           {{/each}}
         </table>
+        <div id="map">{{addMap geoLocations}}
+        </div>
       </div>
     </script>
 
@@ -342,6 +345,7 @@
     <script src="js/lib/ember.js"></script>
     <script src="js/lib/ember-data.js"></script>
     <script src="js/lib/moment.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 
     <!-- app dependencies -->
     <script src="js/app.js"></script>
@@ -356,6 +360,7 @@
     <script src="js/routes/indexRoute.js"></script>
     <script src="js/views/views.js"></script>
     <script src="js/controllers/follow_us.js"></script>
+    <script src="js/helpers/helpers.js"></script>
   </body>
 
   <!--
