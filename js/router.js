@@ -1,8 +1,7 @@
 App.Router.map(function() {
 	this.resource('welcome');
-	this.resource('story');
 	this.resource('wedding');
-	this.resource('location');
+	this.resource('rehearsal');
 	this.resource('accommodations');
 	this.resource('travel');
 	this.resource('rsvps', function() {

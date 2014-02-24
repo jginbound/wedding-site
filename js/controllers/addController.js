@@ -22,6 +22,7 @@ App.AddController = Ember.ObjectController.extend({
 			newRSVP.save();
 
 			newRSVP.one('didCreate', this, function() {
+				L.marker([ location.lat, location.lng ]).addTo(App.map);
 				alert('Your RSVP has successfully been saved!');
 				this.transitionToRoute('rsvps');
 			});

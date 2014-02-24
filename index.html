@@ -78,16 +78,13 @@
               <img src='images/iris2.png'></img>
               <a href="#welcome">Welcome</a>
             {{/link-to}}
-            {{#link-to 'story' tagName="li"}}
-              <img src='images/iris2.png'></img>
-              <a href="#story">Our Story</a>{{/link-to}}
             {{#link-to 'wedding' tagName="li"}}
               <img src='images/iris2.png'></img>
               <a href="#wedding">The Wedding</a>
             {{/link-to}}
-            {{#link-to 'location' tagName="li"}}
+            {{#link-to 'rehearsal' tagName="li"}}
               <img src='images/iris2.png'></img>
-              <a href="#location">The Location</a>
+              <a href="#rehearsal">The Saturday BBQ</a>
             {{/link-to}}
             {{#link-to 'accommodations' tagName="li"}}
               <img src='images/iris2.png'></img>
@@ -134,31 +131,39 @@
       </p>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="story">
-      {{! the story of how they met }}
-      <div>
-        <h3>Our Story</h3>
-        <p>Story coming soon!</p>
-      </div>
-    </script>
-
     <script type="text/x-handlebars" data-template-name="wedding">
       <h1>The Wedding</h1>
 
-      <p>We will be getting married at Rebekah&#39;s parents&#39; house in Olympia, Washington.</p>
-       
-      <p class="center">3208 46th Ave NW<br>
-      Olympia, WA 98502</p>
-       
-      <p>The ceremony will begin at 3:30pm, followed by a dinner reception at the house.  Parking will be available on the street leading up to the house on the side of the road.  Please plan to carpool if possible, as parking is limited. </p>
+      <p>We will be getting married at Rebekah&#39;s parents&#39; house in Olympia, Washington. The ceremony will begin at 3:30pm, followed by a dinner reception at the Olympia Yacht Club. Parking will be available on the street leading up to the house on the side of the road for the ceremony. Please plan to carpool if possible, as parking is limited. You can carpool from the reception site (see below).</p>
+
+      <div class="well">
+        <ul>
+          <li>The Binns House</li>
+          <li>3208 46th Ave NW</li>
+          <li>Olympia, WA 98502</li>
+        </ul>
+      </div>
+
+      <h2>The Reception</h2>
+
+      <p>The reception will be held at the Olympia Yacht Club, approximately 6 miles from the ceremony site.  The reception is within walking distance of the Red Lion (under 2 miles).  Parking is available out front of the Olympia Yacht Club in a public parking area ($2 for the entire day).  Please note: the parking lot directly in front of the Olympia Yacht Club is reserved for yacht club members only and is not available to wedding guests.</p>
+
+      <div class="well">
+        <ul>
+          <li>Olympia Yacht Club</li>
+          <li>201 Simmons St. NW</li>
+          <li>Olympia, WA 98501</li>
+        </ul>
+      </div>
+
+      <iframe src="https://mapsengine.google.com/map/embed?mid=z2CR2Tk7G3yk.kz8vPRIdCido" width="640" height="480"></iframe>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="location">
-      {{! information on the location }}
+    <script type="text/x-handlebars" data-template-name="rehearsal">
+      {{! information on the Saturday BBQ }}
       <div>
-        <h3>The Location</h3>
-        <p>The wedding will take place in Olympia, WA. Check back
-          later for more information</p>
+        <h3>The Saturday BBQ</h3>
+        <p>On June 21st, we&#39;ll be hosting a BBQ at a park in Olympia. We&#39;re still figuring out the specifics, but we will up you when we finalize the details. This is optional, but we wanted to thank all of our out-of-towners for coming in! We will be providing food and drinks.</p>
       </div>
     </script>
 
@@ -168,12 +173,20 @@
       <h3>There are several options for accommodations in Olympia:</h3>
 
       <ul>
-        <li>We have reserved a bloc of 10 rooms at the Red Lion for a nightly rate of $99 (double occupancy).  The Red Lion is approximately 10-15 minutes drive away from the wedding site.</li>
-        <li>Olympia has several nice parks for those inclined to camp (though remember it is June in the Pacific Northwest.  Always plan for inclement weather).</li>
-        <li>The American Heritage Campground (http://www.olympiacampground.com/ah_frontpage.htm) is approximately 20 minutes drive from the wedding site.  The fee for a tent campground for two is $22/night, and they also have camping cabins available for $45/night.</li>
-        <li>The Millersylvania Park (http://www.parks.wa.gov/parks/?selectedpark=Millersylvania&subject=camping) is located approximately 25 minutes from the wedding site.  A standard tent campsite will set you back approximately $23-$26/night for the site.</li>
-        <li>Olympia has a whole host of AirBnB (https://www.airbnb.com/s/Olympia--WA) options ranging from $60/night for 2 people on up to renting an entire house.</li>
-        <li>For groups of people, renting a house might be a tenable option.  There are options at AirBnB and Vacation Rental By Owner (http://www.vrbo.com/vacation-rentals/usa/washington/puget-sound/puget-sound-south/olympia).</li>
+        <li>We have reserved a block of 10 rooms at the Red Lion for a nightly rate of $99 (double occupancy) or $109 a night for triple or quadruple occupancy.  The Red Lion is approximately 10-15 minutes drive away from the wedding site and 1.7 miles away from the reception site.
+          <div class="well">
+            <h4>To reserve a room:</h4>
+            <p>You can make a reservation by calling 1-800-733-5466 and referencing the Binns Wedding or group block code BINN0620. You can also go online to www.olympia.redlion.com and enter promo code BINN0620 to receive the group discount.  You must book by May 30, 2014 in order to participate in the group block rate.  Cancellations without penalty are allowed up to 24 hours before the reservation. </p>
+          </div>
+        </li>
+        <li>Olympia has several nice parks for those inclined to camp (though remember it is June in the Pacific Northwest.  Always plan for inclement weather).
+          <ul>
+            <li><a href="http://www.olympiacampground.com/ah_frontpage.htm">The American Heritage Campground</a> is approximately 20 minutes drive from the wedding site.  The fee for a tent campground for two is $22/night, and they also have camping cabins available for $45/night.</li>
+            <li><a href="http://www.parks.wa.gov/parks/?selectedpark=Millersylvania&subject=camping">The Millersylvania Park</a> is located approximately 25 minutes from the wedding site.  A standard tent campsite will set you back approximately $23-$26/night for the site.</li>
+          </ul>
+        </li>
+        <li><a href="https://www.airbnb.com/s/Olympia--WA">Olympia has a whole host of AirBnB</a> options ranging from $60/night for 2 people on up to renting an entire house.</li>
+        <li>For groups of people, renting a house might be a tenable option.  There are options at AirBnB and <a href="http://www.vrbo.com/vacation-rentals/usa/washington/puget-sound/puget-sound-south/olympia">Vacation Rental By Owner.</a></li>
       </ul>
     </script>
 
@@ -182,7 +195,7 @@
  
       <h3>Air Travel</h3>
 
-      <p>The Binns&#39; House is located one hour drive Seattle-Tacoma International Airport (SEA) by car and two hours from Portland International Airport (PDX).</p>
+      <p>The Binns&#39; House is located one hour drive Seattle-Tacoma International Airport (SEA) by car and two hours from Portland International Airport (PDX). SEA is the closest airport to the wedding.  You will need to rent a car to get the wedding site from either SEA or PDX (unless you are very adventurous and are willing to brave taxis, greyhounds, and trains).</p>
 
       <h3>Public Transportation</h3>
 

@@ -13,4 +13,7 @@ Ember.Handlebars.helper('addMap', function(geoLocations) {
   });
 });
 
-
+/*
+  Figure out how to use circles that expand as more people are
+  from a specific zip code.
+*/
