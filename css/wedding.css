@@ -4,6 +4,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	overflow: auto;
 }
 
 .center {
@@ -22,11 +23,6 @@ img.bg {
 
 .table {
 	width: 95%;
-}
-
-.content {
-	overflow: auto;
-	max-height: 600px;
 }
 
 .transparent {
@@ -103,4 +99,8 @@ img {
 #map {
 	height: 400px;
 	max-width: 700px;
+}
+
+.bullet-free {
+	list-style-type: none;
 }
