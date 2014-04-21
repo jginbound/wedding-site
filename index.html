@@ -218,14 +218,17 @@
           {{#each rsvp in controller}}
             <tr>
               <td>{{rsvp.full_name}}</td>
-              <td>{{rsvp.stomping_ground.address}}</td>
+              <td>{{rsvp.address}}</td>
               <td>{{rsvp.guest_association}}</td>
             </tr>
           {{/each}}
         </table>
-        <div id="map">{{addMap geoLocations}}
-        </div>
+        {{leaflet-map geoLocations=geoLocations}}
       </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="components/leaflet-map">
+      <div id="map"></div>
     </script>
 
     <script type="text/x-handlebars" data-template-name="add">
@@ -254,7 +257,7 @@
               {{input type="text" value=zip_code placeholder="Zip code here"}}
             </div>
             <div class="group1">
-              <label>Guests</label>
+              <label>Guests (+1&#39;s)</label>
               {{input type='number' value=guests placeholder=0}}
             </div>
             <div id="foodChoice">
@@ -389,7 +392,8 @@
     <script src="js/routes/indexRoute.js"></script>
     <script src="js/views/views.js"></script>
     <script src="js/controllers/follow_us.js"></script>
-    <script src="js/helpers/helpers.js"></script>
+
+    <script src="js/components/leafletMapComponent.js"></script>
   </body>
 
   <!--

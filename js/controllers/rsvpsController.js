@@ -14,11 +14,9 @@ App.RsvpsController = Ember.ArrayController.extend({
 	}.observes('model'),
 
 	geoLocations: function(location) {
-		console.log('Running geoLocations');
 		var locations = this.get('model');
 		var coordinates = locations.map( function( location ) {
-			var info = location.get('stomping_ground');
-			return [ info.lat, info.lng ];
+			return [ location.get('lat'), location.get('lng') ];
 		});
 
 		return coordinates;

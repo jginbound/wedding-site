@@ -14,10 +14,28 @@ App.AddController = Ember.ObjectController.extend({
 
 			if((guests + 1) != (salmon + bbq + veggie)) {
 				console.log(guests + ': ' + salmon + ' ' + bbq + ' ' + veggie);
-				return alert('The number of guest must match the number of dinner choices.');
-			}
-			else {
+				return alert('The number of guests must match the number of dinner choices.');
+			} else if (!this.get('association')) {
+				return alert('Please specify your association with the couple.')
+			} else if (!this.get('zip_code')) {
+				return alert('Please list your zip code.');
+			} else {
 				var newRSVP = this.store.createRecord('rsvp', this.get('model'));
+
+				var data = $.ajax({
+					type: 'GET',
+					url: 'http://maps.googleapis.com/maps/api/geocode/json?address=' +
+						newRSVP.get('zip_code') + '&sensor=false',
+					async: false
+				});
+
+				data = JSON.parse(data.responseText);
+				data = data.results[0];
+				var geo = data.geometry.bounds.northeast;
+
+				newRSVP.set('address', data.formatted_address);
+				newRSVP.set('lat', geo.lat);
+				newRSVP.set('lng', geo.lng);
 
 				newRSVP.save();
 

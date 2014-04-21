@@ -1,5 +1,6 @@
 // Module dependencies.
 var application_root = __dirname,
+    fs = require('fs'),
     myConfig = require('./myConfig.js'),
     mysql = require('mysql'),
     express = require( 'express' ), //Web framework
@@ -56,15 +57,6 @@ app.get('/rsvps', function(request, response) {
         if (err) throw err;
 
         response.send( { 'rsvps': rows } );
-
-        /*
-        else
-            response.send({ 'rsvps': {
-                'first_name': 'RSVP',
-                'last_name': 'today!',
-                'isComing': true,
-                'zip_code': 98118
-            }}); */
     });
 });
 
@@ -84,7 +76,10 @@ app.post( '/rsvps', function(request, response) {
         req.bbq,
         req.veggie,
         req.groom_bride,
-        req.association
+        req.association,
+        req.address,
+        req.lat,
+        req.lng
     ];
 
     connection.query( create_insert_statement( 'rsvps', values ),
@@ -96,12 +91,6 @@ app.post( '/rsvps', function(request, response) {
             return response.send({ 'rsvp': req })
     });
 });
-
-
-
-
-
-
 
 
 

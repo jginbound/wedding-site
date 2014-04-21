@@ -10,11 +10,14 @@ App.Rsvp = DS.Model.extend({
 	veggie: DS.attr(),
 	groom_bride: DS.attr(),
 	association: DS.attr(),
+	address: DS.attr(),
+	lat: DS.attr(),
+	lng: DS.attr(),
 
 	full_name: function() {
 		return this.get('first_name') + ' ' + this.get('last_name');
 	}.property('first_name', 'last_name'),
-
+/*
 	stomping_ground: function() {
 		if(!this.get('zip_code')) 
 			return null;
@@ -38,7 +41,7 @@ App.Rsvp = DS.Model.extend({
 		//return data.results[0].formatted_address;
 		return address_info;
 	}.property('zip_code'),
-
+*/
 	guest_association: function() {
 		return this.get('groom_bride') + ': ' + this.get('association');
 	}.property('groom_bride', 'relation_origin')
