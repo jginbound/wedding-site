@@ -12,7 +12,7 @@ App.AddController = Ember.ObjectController.extend({
 				bbq	   = +this.get('bbq') || 0,
 				veggie = +this.get('veggie') || 0;
 
-			if(this.get('isComing') === false) {
+			if(this.get('isComing') != true) {
 				var newRSVP = this.store.createRecord('rsvp', this.get('model'));
 				newRSVP.save();
 
