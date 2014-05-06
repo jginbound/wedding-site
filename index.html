@@ -218,11 +218,13 @@
             </tr>
           </thead>
           {{#each rsvp in controller}}
-            <tr>
-              <td>{{rsvp.full_name}}</td>
-              <td>{{rsvp.address}}</td>
-              <td>{{rsvp.guest_association}}</td>
-            </tr>
+            {{#if rsvp.isComing}}
+              <tr>
+                <td>{{rsvp.full_name}}</td>
+                <td>{{rsvp.address}}</td>
+                <td>{{rsvp.guest_association}}</td>
+              </tr>
+            {{/if}}
           {{/each}}
         </table>
         {{leaflet-map geoLocations=geoLocations}}
