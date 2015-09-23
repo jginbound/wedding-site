@@ -1,5 +1,7 @@
 body {
-	background: url(../images/backgrounds/rainier7.jpg) no-repeat top center fixed;
+	background: linear-gradient(#8a239f, transparent 90%),
+				linear-gradient(0deg, #fff, transparent),
+				url(../images/backgrounds/rainier7.jpg) no-repeat top center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
