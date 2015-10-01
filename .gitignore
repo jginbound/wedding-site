@@ -3,4 +3,4 @@ myConfig.js
 /private/*
 mysql_initialize.sql
 node_modules/
-
+.DS_Store
